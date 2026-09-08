@@ -1,0 +1,10 @@
+<Project>
+  <Import Project="$(MSBuildThisFileDirectory)Directory.Build.targets.bak" Condition="Exists('$(MSBuildThisFileDirectory)Directory.Build.targets.bak')" />
+  <PropertyGroup>
+    <RestoreAdditionalProjectSources>$(RestoreAdditionalProjectSources);$(MSBuildThisFileDirectory).nuget</RestoreAdditionalProjectSources>
+    <DefaultItemExcludes>$(DefaultItemExcludes);$(MSBuildThisFileDirectory).nuget\**\*</DefaultItemExcludes>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="ProjectMetadata.Analyzers.v961" Version="1.2.89" PrivateAssets="all" />
+  </ItemGroup>
+</Project>
